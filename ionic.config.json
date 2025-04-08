@@ -1,0 +1,7 @@
+{
+  "name": "angiday",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
