@@ -1,0 +1,216 @@
+<ion-content fullscreen class="splash-screen-page">
+  <div class="splash-screen-container">
+    <div class="splash-screen-content">
+      <div class="information-wrap">
+        <h1 class="title">Ăn gì đây?</h1>
+        <p class="subtitle">Mang đồ ăn ngon tới ngay nhà bạn.</p>
+      </div>
+
+      <div class="group-button-wrap">
+        <ion-button
+          id="open-sign-in-modal"
+          class="sign-in-btn"
+          expand="full"
+          color="primary"
+        >
+          Đăng nhập
+        </ion-button>
+        <ion-button
+          id="open-sign-up-modal"
+          class="sign-up-btn"
+          expand="full"
+          color="light"
+        >
+          Đăng ký
+        </ion-button>
+
+        <ion-modal
+          #modalSignIn
+          class="sign-in-modal"
+          trigger="open-sign-in-modal"
+          [initialBreakpoint]="0.8"
+          [breakpoints]="[0, 0.8, 0.9]"
+        >
+          <ng-template>
+            <ion-content class="ion-padding">
+              <p class="modal-title">Đăng nhập</p>
+              <form class="login-form" [formGroup]="signInForm">
+                <ion-input
+                  formControlName="phone"
+                  mode="md"
+                  fill="outline"
+                  placeholder="Số điện thoại"
+                ></ion-input>
+                <ion-input
+                  formControlName="password"
+                  type="password"
+                  mode="md"
+                  fill="outline"
+                  placeholder="Mật khẩu"
+                ></ion-input>
+                <ion-button
+                  id="open-modal"
+                  class="sign-in-btn"
+                  expand="full"
+                  color="primary"
+                >
+                  Đăng nhập
+                </ion-button>
+              </form>
+
+              <div class="disclaimer">
+                By clicking Sign up, you agree to
+                <a href="">Groob’s Services Agreement</a> and
+                <a href="">Privacy Policy.</a>
+              </div>
+
+              <div class="sign-up-link">
+                <p>Bạn chưa có tài khoản?</p>
+                <a (click)="modalSignIn.dismiss(); modalSignUp.present()">
+                  Đăng ký
+                </a>
+              </div>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+
+        <ion-modal
+          #modalSignUp
+          class="sign-up-modal"
+          trigger="open-sign-up-modal"
+          [initialBreakpoint]="0.8"
+          [breakpoints]="[0, 0.8, 0.9]"
+        >
+          <ng-template>
+            <ion-content class="ion-padding">
+              @switch (currentStepSignUp) {
+                @case (1) {
+                  <div class="step-1">
+                    <p class="modal-title">Đăng ký</p>
+                    <form class="login-form" [formGroup]="signUpForm">
+                      <ion-input
+                        formControlName="phone"
+                        mode="md"
+                        fill="outline"
+                        placeholder="Số điện thoại"
+                      ></ion-input>
+                      <ion-input
+                        formControlName="password"
+                        type="password"
+                        mode="md"
+                        fill="outline"
+                        placeholder="Mật khẩu"
+                      ></ion-input>
+
+                      <ion-button
+                        class="sign-up-btn"
+                        expand="full"
+                        color="primary"
+                        (click)="signUp()"
+                      >
+                        Đăng ký
+                      </ion-button>
+                    </form>
+
+                    <div class="disclaimer">
+                      By clicking Sign up, you agree to
+                      <a href="">Groob’s Services Agreement</a> and
+                      <a href="">Privacy Policy.</a>
+                    </div>
+
+                    <div class="sign-up-link">
+                      <p>Bạn đã có tài khoản?</p>
+                      <a (click)="modalSignIn.present(); modalSignUp.dismiss()">
+                        Đăng nhập
+                      </a>
+                    </div>
+                  </div>
+                }
+                @case (2) {
+                  <div class="step-2">
+                    <div class="verify-wrap">
+                      <p class="verify-title">Xác thực số điện thoại</p>
+                      <p class="verify-subtitle">
+                        Hãy nhập mã xác thực đã được gửi đến số điện thoại của
+                        bạn.
+                      </p>
+
+                      <ion-input
+                        mode="md"
+                        fill="outline"
+                        placeholder="Mã xác thực"
+                        type="number"
+                      ></ion-input>
+                    </div>
+
+                    <div class="verify-actions-wrap">
+                      <ion-button
+                        class="continue-btn"
+                        expand="full"
+                        color="primary"
+                        (click)="verifyOtp()"
+                      >
+                        Tiếp tục
+                      </ion-button>
+                      <ion-button
+                        class="resend-btn"
+                        fill="clear"
+                        expand="full"
+                        color="secondary"
+                      >
+                        Gửi lại mã xác thực
+                      </ion-button>
+                    </div>
+
+                    <p class="verify-disclaimer">
+                      Bạn chưa nhận được mã xác thực? Việc đó có thể mất vài
+                      phút.
+                    </p>
+                  </div>
+                }
+                @case (3) {
+                  <div class="step-3">
+                    <div class="profile-wrap">
+                      <img
+                        width="80"
+                        src="assets/images/bg-banh-mi.svg"
+                        alt="bg-banh-mi"
+                      />
+                      <p class="profile-title">
+                        Hãy cho chúng tôi biết tên của bạn
+                      </p>
+                      <p class="profile-subtitle">
+                        Sắp xong rồi! Chỉ cần cho chúng tôi biết bạn muốn chúng
+                        tôi gọi bạn là gì trong hồ sơ của bạn.
+                      </p>
+                      <ion-input
+                        type="text"
+                        mode="md"
+                        fill="outline"
+                        placeholder="Tên của bạn"
+                      >
+                        <ion-icon
+                          slot="start"
+                          src="assets/icon/ico-person.svg"
+                        ></ion-icon>
+                      </ion-input>
+                    </div>
+
+                    <ion-button
+                      class="finish-btn"
+                      expand="full"
+                      color="primary"
+                      (click)="finishSignUp()"
+                    >
+                      Hoàn tất
+                    </ion-button>
+                  </div>
+                }
+              }
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+      </div>
+    </div>
+  </div>
+</ion-content>

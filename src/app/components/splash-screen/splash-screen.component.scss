@@ -1,0 +1,149 @@
+ion-modal.sign-in-modal,
+ion-modal.sign-up-modal {
+  ion-content {
+    .modal-title {
+      margin-bottom: 2rem;
+      font-weight: 600;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .sign-in-btn {
+        margin-top: 8px;
+      }
+    }
+
+    .disclaimer {
+      margin-top: 24px;
+      font-size: 12px;
+      color: var(--ion-text-secondary);
+      text-align: center;
+      line-height: 18px;
+
+      a {
+        color: var(--ion-text-secondary);
+      }
+    }
+
+    .sign-up-link {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+
+    .step-2 {
+      .verify-wrap {
+        .verify-title {
+          margin-top: 24px;
+          margin-bottom: 0;
+          color: var(--ion-text-primary);
+          font-size: 20px;
+          font-weight: 600;
+        }
+
+        .verify-subtitle {
+          color: var(--ion-text-secondary);
+          margin-bottom: 24px;
+          font-size: 14px;
+        }
+      }
+
+      .verify-actions-wrap {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .resend-btn {
+          &::part(native) {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .verify-disclaimer {
+        font-size: 14px;
+        color: var(--ion-text-primary);
+        text-align: center;
+      }
+    }
+
+    .step-3 {
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+
+      .profile-wrap {
+        img {
+          transform: rotate(90deg);
+        }
+
+        .profile-title {
+          margin-top: 24px;
+          margin-bottom: 0;
+          color: var(--ion-text-primary);
+          font-size: 20px;
+          font-weight: 600;
+        }
+        .profile-subtitle {
+          color: var(--ion-text-secondary);
+          margin-bottom: 24px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.splash-screen-page {
+  --background: url(../../../assets/images/bg-splash-screen.png) no-repeat right;
+
+  .splash-screen-container {
+    backdrop-filter: brightness(0.45);
+
+    .splash-screen-content {
+      height: 100dvh;
+      display: grid;
+      grid-template-rows: 1fr max-content;
+      padding: 0.5rem;
+      overflow: hidden;
+
+      .information-wrap {
+        place-content: center;
+        place-items: center;
+        color: white;
+
+        .title {
+          font-size: 42px;
+          font-weight: 700;
+        }
+
+        .subtitle {
+          margin-bottom: 40%;
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+
+      .group-button-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        ion-button {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
