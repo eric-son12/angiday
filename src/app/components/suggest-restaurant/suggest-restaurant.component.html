@@ -1,0 +1,33 @@
+<div class="suggest-restaurant-section">
+  <div class="suggest-restaurant-header">
+    <p>Đề xuất nhà hàng cho bạn</p>
+  </div>
+  <div class="suggest-restaurant-content">
+    <div class="suggest-list">
+      @for (suggest of suggestRestaurants; track $index) {
+        <div class="suggest-item">
+          <img [src]="suggest.thumb" [alt]="suggest.name" />
+          <div class="restaurant-info-wrap">
+            <p class="name">{{ suggest.name }}</p>
+            <div>
+              <div class="prepare-time">
+                <p class="label">Thời gian chuẩn bị</p>
+                <p class="time">{{ suggest.prepareTime }}</p>
+              </div>
+
+              <div class="rate-wrap">
+                <ion-icon
+                  slot="start"
+                  src="assets/icon/ico-stars.svg"
+                ></ion-icon>
+                <span>
+                  {{ suggest.rate }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

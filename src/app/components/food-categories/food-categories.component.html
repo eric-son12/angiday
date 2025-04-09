@@ -1,0 +1,25 @@
+<div class="food-categories-section">
+  <div class="food-categories-header">
+    <p>Các loại thức ăn</p>
+    <ion-button fill="clear" color="secondary">
+      Xem thêm
+      <ion-icon slot="end" src="assets/icon/ico-arrow-right.svg"></ion-icon>
+    </ion-button>
+  </div>
+  <div class="food-categories-content">
+    <swiper-container
+      class="mySwiper"
+      space-between="8px"
+      slides-per-view="auto"
+    >
+      @for (category of categories; track $index) {
+        <swiper-slide class="category-item">
+          <div class="bg-category">
+            <img [src]="category.image" [alt]="category.name" />
+          </div>
+          <p class="category-name">{{ category.name }}</p>
+        </swiper-slide>
+      }
+    </swiper-container>
+  </div>
+</div>

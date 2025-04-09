@@ -111,3 +111,17 @@ ion-input {
   //   --border-color: var(--ion-color-primary-tint) !important;
   // }
 }
+
+swiper-container {
+  &::part(bullet-active) {
+    width: 9px;
+    height: 9px;
+    border-radius: 4px;
+    background: white;
+  }
+
+  &::part(bullet) {
+    background: rgba(255, 255, 255, 0.33);
+    opacity: 1;
+  }
+}

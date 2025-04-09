@@ -1,0 +1,87 @@
+.suggest-restaurant-section {
+  .suggest-restaurant-header {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    ion-button {
+      --padding-top: 8px;
+      --padding-bottom: 8px;
+      min-height: fit-content;
+
+      ion-icon {
+        font-size: 18px;
+      }
+
+      &::part(native) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .suggest-restaurant-content {
+    .suggest-list {
+      display: flex;
+      gap: 24px;
+      overflow: auto;
+
+      .suggest-item {
+        img {
+          width: 100%;
+          max-width: 50vw;
+          border-radius: 4px;
+          object-fit: cover;
+        }
+
+        .restaurant-info-wrap {
+          margin-top: 8px;
+
+          .name {
+            margin: 0;
+            font-weight: 500;
+          }
+
+          > div {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+          }
+
+          .prepare-time {
+            .label {
+              margin: 0;
+              font-size: 12px;
+              font-weight: 500;
+              color: var(--ion-text-secondary);
+            }
+
+            .time {
+              margin: 0;
+              margin-top: 4px;
+              font-size: 14px;
+              font-weight: 500;
+              color: var(--ion-text-primary);
+            }
+          }
+
+          .rate-wrap {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--ion-text-secondary);
+          }
+        }
+      }
+    }
+  }
+}

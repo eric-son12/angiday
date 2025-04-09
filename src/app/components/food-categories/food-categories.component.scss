@@ -1,0 +1,67 @@
+.food-categories-section {
+  .food-categories-header {
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    ion-button {
+      --padding-top: 8px;
+      --padding-bottom: 8px;
+      min-height: fit-content;
+
+      ion-icon {
+        font-size: 18px;
+      }
+
+      &::part(native) {
+        font-size: 14px;
+        padding: 8px 2px;
+      }
+    }
+  }
+
+  .food-categories-content {
+    .category-item {
+      padding: 10px;
+
+      .bg-category {
+        display: grid;
+        place-content: center;
+        width: 60px;
+        height: 60px;
+        background: #f1f4f8;
+        border-radius: 50%;
+
+        img {
+          width: 42px;
+          height: 42px;
+          object-fit: cover;
+        }
+      }
+
+      .category-name {
+        margin-bottom: 4px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--ion-text-secondary);
+        text-align: center;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  swiper-container {
+    width: 100%;
+
+    swiper-slide {
+      width: fit-content !important;
+    }
+  }
+}

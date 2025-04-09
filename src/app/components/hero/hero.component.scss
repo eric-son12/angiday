@@ -1,0 +1,13 @@
+.hero-section {
+  swiper-container {
+    width: 100%;
+
+    swiper-slide {
+      width: fit-content;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

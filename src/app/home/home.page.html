@@ -1,17 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding home-page" [fullscreen]="true">
+  <div class="home-page-content">
+    <ion-header [translucent]="true">
+      <ion-toolbar>
+        <ion-label slot="start"
+          ><ion-icon slot="start" src="assets/icon/ico-location.svg"></ion-icon>
+          97 Lý Chính Thắng, P3, Q3</ion-label
+        >
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+        <ion-button slot="end" fill="clear">
+          <ion-icon slot="icon-only" src="assets/icon/ico-bag.svg"></ion-icon>
+        </ion-button>
+      </ion-toolbar>
+    </ion-header>
+    <app-hero></app-hero>
+    <app-food-categories></app-food-categories>
+    <app-suggest-restaurant></app-suggest-restaurant>
+  </div>
 </ion-content>
