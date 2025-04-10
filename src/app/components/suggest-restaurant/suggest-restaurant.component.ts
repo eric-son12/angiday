@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonIcon } from '@ionic/angular/standalone';
 
 @Component({
@@ -25,7 +26,11 @@ export class SuggestRestaurantComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  private router = inject(Router);
 
   ngOnInit() {}
+
+  navigateProductDetail() {
+    this.router.navigate(['/product-detail']);
+  }
 }

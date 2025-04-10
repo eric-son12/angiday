@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
-import { SplashScreenComponent } from '../components/splash-screen/splash-screen.component';
 
 export const routes: Routes = [
   {
@@ -28,10 +27,6 @@ export const routes: Routes = [
         pathMatch: 'full',
       },
     ],
-  },
-  {
-    path: 'splash-screen',
-    component: SplashScreenComponent,
   },
   {
     path: '',

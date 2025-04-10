@@ -1,0 +1,81 @@
+<ion-content class="product-detail-page" [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start" mode="ios">
+        <ion-back-button color="dark" defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="branch-information-wrap">
+    <h4>The Breakfast Club</h4>
+    <div class="related-branches">
+      <div class="related-branches-item">
+        <p class="label">Thời gian chuẩn bị</p>
+        <p class="value">20 - 30 phút</p>
+      </div>
+      <div class="related-branches-item">
+        <p class="label">Phí vận chuyển</p>
+        <p class="value">15.000đ</p>
+      </div>
+      <div class="related-branches-item">
+        <p class="label">Đánh giá (4.9)</p>
+        <p class="value">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star-half"></ion-icon>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-detail-content">
+    <ion-segment mode="md" value="all" scrollable="true">
+      @for (cate of categories; track $index) {
+      <ion-segment-button [value]="cate.value" [contentId]="cate.value">
+        <ion-label>{{cate.name}}</ion-label>
+      </ion-segment-button>
+      }
+    </ion-segment>
+    <ion-segment-view>
+      @for (cate of categories; track $index) {
+      <ion-segment-content class="ion-padding" [id]="cate.value">
+        <div class="advertise">
+          <div>
+            <p class="advertise-title">
+              Tiết kiệm 10% cho đơn hàng từ 200.000đ trở lên
+            </p>
+            <p class="advertise-desc">
+              Giảm giá 10% cho đơn hàng từ 200.000đ trở lên. Không áp dụng cho
+              các sản phẩm đã giảm giá.
+            </p>
+          </div>
+          <img src="assets/icon/ico-badge.svg" alt="badge icon" />
+        </div>
+        <ion-list class="ion-no-padding products-list" lines="none">
+          @for (product of cate.products; track $index) {
+          <ion-item class="product-item">
+            <ion-thumbnail slot="start">
+              <img src="{{ product.image }}" alt="{{ product.name }}" />
+            </ion-thumbnail>
+            <ion-label>
+              <p class="name">{{ product.name }}</p>
+              <p class="desc">{{ product.desc }}</p>
+              <p class="price">{{ product.price }}đ</p>
+            </ion-label>
+            <ion-note>
+              <ion-button color="primary" class="add-to-cart-btn">
+                <ion-icon slot="start" name="add"></ion-icon>
+              </ion-button>
+            </ion-note>
+          </ion-item>
+          }
+        </ion-list>
+      </ion-segment-content>
+      }
+    </ion-segment-view>
+  </div>
+</ion-content>

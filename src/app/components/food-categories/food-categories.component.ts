@@ -10,14 +10,17 @@ import { IonButton, IonIcon } from '@ionic/angular/standalone';
 })
 export class FoodCategoriesComponent implements OnInit {
   categories = [
-    { name: 'burger', image: 'assets/images/categories/burger.svg' },
-    { name: 'ramen', image: 'assets/images/categories/ramen.svg' },
-    { name: 'breakfast', image: 'assets/images/categories/breakfast.svg' },
-    { name: 'noodles', image: 'assets/images/categories/noodles.svg' },
-    { name: 'burger', image: 'assets/images/categories/burger.svg' },
-    { name: 'ramen', image: 'assets/images/categories/ramen.svg' },
-    { name: 'breakfast', image: 'assets/images/categories/breakfast.svg' },
-    { name: 'noodles', image: 'assets/images/categories/noodles.svg' },
+    { name: 'cake', image: 'assets/images/categories/cake.png' },
+    { name: 'cocktail', image: 'assets/images/categories/cocktail.png' },
+    { name: 'cupcake', image: 'assets/images/categories/cupcake.png' },
+    { name: 'donut', image: 'assets/images/categories/donut.png' },
+    { name: 'ice cream', image: 'assets/images/categories/ice-cream.png' },
+    { name: 'milk', image: 'assets/images/categories/milk.png' },
+    { name: 'noodle', image: 'assets/images/categories/noodle.png' },
+    { name: 'pancake', image: 'assets/images/categories/pancake.png' },
+    { name: 'soda', image: 'assets/images/categories/soda.png' },
+    { name: 'sushi', image: 'assets/images/categories/sushi.png' },
+    { name: 'waffle', image: 'assets/images/categories/waffle.png' },
   ];
   constructor() {}
 

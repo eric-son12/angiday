@@ -1,0 +1,182 @@
+.product-detail-page {
+  ion-header {
+    ion-toolbar {
+      --background: url("/assets/images/bg-product-detail.png");
+      min-height: 191px;
+    }
+  }
+
+  .branch-information-wrap {
+    margin-top: 24px;
+
+    h4 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ion-text-primary);
+      line-height: 22px;
+      text-align: center;
+    }
+
+    .related-branches {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+
+      .related-branches-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .label {
+          margin: 0;
+          font-size: 10px;
+          font-weight: 500;
+          color: var(--ion-text-secondary);
+        }
+
+        .value {
+          margin-top: 4px;
+          font-size: 14px;
+          font-weight: 500;
+          color: var(--ion-text-primary);
+
+          ion-icon {
+            font-size: 16px;
+            color: #f2cc02;
+          }
+        }
+      }
+    }
+  }
+
+  .product-detail-content {
+    ion-segment {
+      ion-segment-button {
+        --indicator-height: 3px;
+        --indicator-box-shadow: 0px 0px 2px var(--ion-color-primary);
+        margin-bottom: 4px;
+        color: var(--ion-text-secondary);
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.15px;
+        text-transform: none;
+
+        &.segment-button-checked {
+          color: var(--ion-text-primary);
+          font-weight: 600;
+        }
+
+        &::part(native) {
+          max-height: 38px;
+        }
+
+        &::part(indicator-background) {
+          border-radius: 8px;
+        }
+      }
+    }
+
+    ion-segment-view {
+      ion-segment-content {
+        .advertise {
+          background: #fde4ba;
+          border-radius: 8px;
+          padding: 1rem;
+          display: flex;
+          gap: 12px;
+        }
+
+        .advertise-title {
+          margin: 0;
+          color: var(--ion-text-primary);
+          font-size: 14px;
+          font-weight: 600;
+        }
+
+        .advertise-desc {
+          font-size: 12px;
+          color: var(--ion-text-primary);
+          margin: 0;
+          margin-top: 8px;
+        }
+
+        .products-list {
+          padding: 16px 0;
+
+          .product-item {
+            --padding-top: 0;
+            --padding-bottom: 0;
+            --padding-start: 0;
+            --padding-end: 0;
+            --inner-padding-end: 0;
+            margin-bottom: 16px;
+
+            ion-thumbnail {
+              width: 80px;
+              height: 80px;
+
+              img {
+                object-fit: cover;
+                border-radius: 8px;
+              }
+            }
+
+            ion-label {
+              margin: 0;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              margin-right: 16px;
+              height: 100%;
+
+              p {
+                margin: 0;
+              }
+
+              .name {
+                font-size: 16px;
+                font-weight: 500;
+                color: var(--ion-text-primary);
+              }
+
+              .desc {
+                font-size: 12px;
+                color: var(--ion-text-secondary);
+                display: -webkit-box !important;
+                -webkit-box-orient: vertical;
+                white-space: pre-line;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                word-break: break-all;
+                -webkit-line-clamp: 2;
+              }
+
+              .price {
+                font-size: 18px;
+                font-weight: 700;
+                color: var(--ion-color-secondary);
+              }
+            }
+
+            ion-note {
+              ion-button {
+                &::part(native) {
+                  padding: 8px;
+                  border-radius: 50%;
+                }
+
+                ion-icon {
+                  margin: 0;
+                  font-size: 18px;
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

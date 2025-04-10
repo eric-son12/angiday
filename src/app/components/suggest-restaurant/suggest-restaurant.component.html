@@ -5,7 +5,7 @@
   <div class="suggest-restaurant-content">
     <div class="suggest-list">
       @for (suggest of suggestRestaurants; track $index) {
-        <div class="suggest-item">
+        <div class="suggest-item" (click)="navigateProductDetail()">
           <img [src]="suggest.thumb" [alt]="suggest.name" />
           <div class="restaurant-info-wrap">
             <p class="name">{{ suggest.name }}</p>
