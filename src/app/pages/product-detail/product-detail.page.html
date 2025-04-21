@@ -1,8 +1,13 @@
 <ion-content class="product-detail-page" [fullscreen]="true">
   <ion-header>
     <ion-toolbar>
-      <ion-buttons slot="start" mode="ios">
-        <ion-back-button color="dark" defaultHref="/"></ion-back-button>
+      <ion-buttons slot="start">
+        <ion-back-button
+          mode="md"
+          icon="chevron-back-outline"
+          color="dark"
+          defaultHref="/"
+        ></ion-back-button>
       </ion-buttons>
       <ion-title></ion-title>
     </ion-toolbar>
@@ -57,14 +62,14 @@
         </div>
         <ion-list class="ion-no-padding products-list" lines="none">
           @for (product of cate.products; track $index) {
-          <ion-item class="product-item">
+          <ion-item class="product-item" (click)="openMenuModal(product)">
             <ion-thumbnail slot="start">
               <img src="{{ product.image }}" alt="{{ product.name }}" />
             </ion-thumbnail>
             <ion-label>
               <p class="name">{{ product.name }}</p>
               <p class="desc">{{ product.desc }}</p>
-              <p class="price">{{ product.price }}đ</p>
+              <p class="price">{{ product.price | number }}</p>
             </ion-label>
             <ion-note>
               <ion-button color="primary" class="add-to-cart-btn">

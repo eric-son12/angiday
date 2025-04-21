@@ -1,0 +1,229 @@
+<ion-content class="menu-modal" [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start" (click)="cancel()">
+        <ion-back-button
+          mode="md"
+          icon="chevron-back-outline"
+          color="dark"
+          defaultHref="/"
+        ></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="product-detail-info-wrap">
+    <div>
+      <p class="name">Hồng trà sữa</p>
+      <p class="price">32.000</p>
+    </div>
+    <p class="desc">
+      Không quá đậm trà, thơm trà đen nguyên lá. Ngọt không quá gắt.
+    </p>
+  </div>
+
+  <ion-list lines="none" class="variant-list">
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label slot="start">Chọn Mức Ngọt</ion-label>
+        <ion-note slot="end">
+          <ion-chip color="success">Chọn 1</ion-chip>
+        </ion-note>
+      </ion-item-divider>
+
+      <ion-radio-group mode="md">
+        <ion-item class="variant-item">
+          <ion-radio value="100">
+            <ion-label>
+              <p class="variant-name">100%</p>
+              <p class="variant-price"></p>
+            </ion-label>
+          </ion-radio>
+        </ion-item>
+        <ion-item class="variant-item">
+          <ion-radio value="70">
+            <ion-label>
+              <p class="variant-name">70%</p>
+              <p class="variant-price"></p>
+            </ion-label>
+          </ion-radio>
+        </ion-item>
+        <ion-item class="variant-item">
+          <ion-radio value="50">
+            <ion-label>
+              <p class="variant-name">50%</p>
+              <p class="variant-price"></p>
+            </ion-label>
+          </ion-radio>
+        </ion-item>
+        <ion-item class="variant-item">
+          <ion-radio value="30">
+            <ion-label>
+              <p class="variant-name">30%</p>
+              <p class="variant-price"></p>
+            </ion-label>
+          </ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label slot="start">Chọn Đá</ion-label>
+        <ion-note slot="end">
+          <ion-chip color="success">Chọn 1</ion-chip>
+        </ion-note>
+      </ion-item-divider>
+
+      <ion-radio-group mode="md">
+        <ion-item class="variant-item">
+          <ion-radio value="rieng">
+            <ion-label>
+              <p class="variant-name">Đá riêng</p>
+              <p class="variant-price"></p>
+            </ion-label>
+          </ion-radio>
+        </ion-item>
+        <ion-item class="variant-item">
+          <ion-radio value="chung">
+            <ion-label>
+              <p class="variant-name">Đá chung</p>
+              <p class="variant-price"></p>
+            </ion-label>
+          </ion-radio>
+        </ion-item>
+        <ion-item class="variant-item">
+          <ion-radio value="khong-da">
+            <ion-label>
+              <p class="variant-name">Không lấy đá</p>
+              <p class="variant-price"></p>
+            </ion-label>
+          </ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label slot="start">Cỡ Ly</ion-label>
+        <ion-note slot="end">
+          <ion-chip color="success">Chọn 1</ion-chip>
+        </ion-note>
+      </ion-item-divider>
+
+      <ion-radio-group mode="md">
+        <ion-item class="variant-item">
+          <ion-radio value="l">
+            <ion-label>
+              <p class="variant-name">Size L</p>
+              <p class="variant-price">+12.000</p>
+            </ion-label>
+          </ion-radio>
+        </ion-item>
+        <ion-item class="variant-item">
+          <ion-radio value="m">
+            <ion-label>
+              <p class="variant-name">Size M</p>
+              <p class="variant-price">+6.000</p>
+            </ion-label>
+          </ion-radio>
+        </ion-item>
+        <ion-item class="variant-item">
+          <ion-radio value="s">
+            <ion-label>
+              <p class="variant-name">Size s</p>
+              <p class="variant-price"></p>
+            </ion-label>
+          </ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label slot="start">Topping</ion-label>
+        <ion-note slot="end">
+          <ion-chip color="dark">Tùy chọn, tối đa 2</ion-chip>
+        </ion-note>
+      </ion-item-divider>
+
+      <ion-item class="variant-item">
+        <ion-checkbox justify="space-between" mode="md">
+          <ion-label>
+            <p class="variant-name">Trân châu trắng giòn</p>
+            <p class="variant-price">+8.000</p>
+          </ion-label>
+        </ion-checkbox>
+      </ion-item>
+      <ion-item class="variant-item">
+        <ion-checkbox justify="space-between" mode="md">
+          <ion-label>
+            <p class="variant-name">Trân châu đen</p>
+            <p class="variant-price">+8.000</p>
+          </ion-label>
+        </ion-checkbox>
+      </ion-item>
+      <ion-item class="variant-item">
+        <ion-checkbox justify="space-between" mode="md">
+          <ion-label>
+            <p class="variant-name">Chôm chôm</p>
+            <p class="variant-price">+6.000</p>
+          </ion-label>
+        </ion-checkbox>
+      </ion-item>
+      <ion-item class="variant-item">
+        <ion-checkbox justify="space-between" mode="md">
+          <ion-label>
+            <p class="variant-name">Macchiato chocolate</p>
+            <p class="variant-price">+12.000</p>
+          </ion-label>
+        </ion-checkbox>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label slot="start">Ghi chú tới quán</ion-label>
+        <ion-note slot="end">
+          <ion-chip color="dark">Tùy chọn</ion-chip>
+        </ion-note>
+      </ion-item-divider>
+
+      <ion-item class="variant-item">
+        <ion-input
+          class="ion-paddings"
+          label-placement="floating"
+          mode="md"
+          fill="outline"
+          placeholder="Ghi chú của bạn"
+        ></ion-input>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="footer-content">
+      <div class="quantity-actions">
+        <ion-button class="quantity-btn" fill="clear" color="secondary">
+          <ion-icon slot="icon-only" name="remove"></ion-icon>
+        </ion-button>
+        <p class="quantity">1</p>
+        <ion-button class="quantity-btn" fill="clear" color="secondary">
+          <ion-icon slot="icon-only" name="add"></ion-icon>
+        </ion-button>
+      </div>
+      <div class="add-to-cart">
+        <ion-button
+          class="add-to-cart-btn"
+          expand="full"
+          color="primary"
+          (click)="addToCart()"
+        >
+          Thêm vào giỏ - 32.000
+        </ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>

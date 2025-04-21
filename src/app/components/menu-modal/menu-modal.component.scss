@@ -1,0 +1,135 @@
+.menu-modal {
+  ion-header {
+    ion-toolbar {
+      --padding-top: max(var(--ion-safe-area-top), 16px);
+      --padding-start: 16px;
+      --background: url("/assets/images/product-image-1.png");
+      padding: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      min-height: 289px;
+    }
+  }
+
+  .product-detail-info-wrap {
+    padding: 1rem;
+
+    .desc {
+      margin: 0;
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--ion-text-secondary);
+      font-weight: 500;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+
+      .name {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--ion-color-gray-700);
+      }
+
+      .price {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--ion-text-primary);
+      }
+    }
+  }
+
+  ion-list {
+    ion-item-group {
+      ion-item-divider {
+        --background: var(--ion-color-gray-100);
+        min-height: 54px;
+        border: 0;
+
+        ion-label {
+          font-weight: 600;
+          color: var(--ion-text-primary);
+        }
+      }
+
+      .variant-item {
+        margin-top: 8px;
+
+        &:last-of-type {
+          margin-bottom: 8px;
+        }
+
+        .variant-name {
+          color: var(--ion-text-primary);
+          font-weight: 500;
+        }
+
+        .variant-price {
+          font-size: 12px;
+          font-weight: 500;
+          color: var(--ion-text-secondary);
+        }
+
+        ion-input {
+          margin: 16px 0px;
+          min-height: 79px;
+        }
+      }
+    }
+  }
+}
+
+ion-footer {
+  box-shadow: 0px 0px 6px #d0d0d0;
+
+  ion-toolbar {
+    padding: 16px 12px !important;
+    padding-bottom: max(var(--ion-safe-area-bottom), 16px) !important;
+    --background: white;
+    --border-width: 0;
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 30% 70%;
+
+      .quantity-actions {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: anchor-center;
+        justify-items: center;
+        border: 1px solid var(--ion-color-secondary);
+        border-radius: 8px;
+
+        ion-button {
+          --padding-top: 0;
+          --padding-start: 0;
+          --padding-bottom: 0;
+          --padding-end: 0;
+        }
+
+        .quantity {
+          color: var(--ion-color-secondary);
+          font-weight: 600;
+        }
+      }
+
+      .add-to-cart {
+        padding-left: 16px;
+
+        .add-to-cart-btn {
+          height: 100%;
+
+          &::part(native) {
+            font-size: 15px !important;
+          }
+        }
+      }
+    }
+  }
+}

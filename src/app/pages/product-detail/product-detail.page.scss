@@ -1,7 +1,13 @@
 .product-detail-page {
   ion-header {
     ion-toolbar {
+      --padding-top: max(var(--ion-safe-area-top), 16px);
+      --padding-start: 16px;
       --background: url("/assets/images/bg-product-detail.png");
+      padding: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
       min-height: 191px;
     }
   }

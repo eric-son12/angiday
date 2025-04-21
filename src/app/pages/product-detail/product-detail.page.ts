@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   IonContent,
@@ -18,15 +18,18 @@ import {
   IonThumbnail,
   IonNote,
   IonIcon,
+  ModalController,
 } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import {
   add,
+  chevronBackOutline,
   star,
   starHalf,
   starHalfOutline,
   starOutline,
 } from 'ionicons/icons';
+import { MenuModalComponent } from 'src/app/components/menu-modal/menu-modal.component';
 
 @Component({
   selector: 'app-product-detail',
@@ -92,9 +95,34 @@ export class ProductDetailPage implements OnInit {
     { name: 'Ăn trưa', value: 'dinner' },
   ];
 
+  private modalCtrl = inject(ModalController);
+
   constructor() {
-    addIcons({ add, starOutline, starHalfOutline, star, starHalf });
+    addIcons({
+      add,
+      starOutline,
+      starHalfOutline,
+      star,
+      starHalf,
+      chevronBackOutline,
+    });
   }
 
   ngOnInit() {}
+
+  async openMenuModal(product: any) {
+    const modal = await this.modalCtrl.create({
+      component: MenuModalComponent,
+      componentProps: {
+        data: product,
+      },
+    });
+    modal.present();
+
+    const { data, role } = await modal.onWillDismiss();
+
+    if (role === 'confirm') {
+      console.log('Modal closed with data:', data);
+    }
+  }
 }
