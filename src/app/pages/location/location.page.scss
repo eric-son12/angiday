@@ -1,0 +1,33 @@
+.location-page {
+  --padding-top: max(var(--ion-safe-area-top), 20px);
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-bottom: 20px;
+
+  .delivery-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ion-text-primary);
+    text-align: center;
+  }
+
+  .delivery-subtitle {
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: var(--ion-text-secondary);
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .banner {
+    width: 100%;
+    margin: 48px 0;
+  }
+
+  .groups-btn {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

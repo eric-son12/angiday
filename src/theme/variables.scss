@@ -71,7 +71,23 @@
   --ion-text-primary: #101010;
   --ion-text-secondary: #8c919e;
   --ion-color-gray-100: #f1f4f8;
+  --ion-color-gray-200: #f1f1f1;
   --ion-color-gray-700: #343434;
+
+  --max-width-app: 450px;
+}
+
+body {
+  background: #ea970140;
+}
+
+.app-wrapper {
+  max-width: var(--max-width-app);
+  margin: auto;
+}
+
+ion-modal {
+  --max-width: 100%;
 }
 
 ion-button {
@@ -80,7 +96,7 @@ ion-button {
   margin: 0;
 
   &::part(native) {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     border-radius: 8px;
   }
@@ -156,5 +172,20 @@ swiper-container {
   &::part(bullet) {
     background: rgba(255, 255, 255, 0.33);
     opacity: 1;
+  }
+}
+
+.back-button {
+  width: 44px;
+  height: 44px;
+
+  &::part(native) {
+    background: rgba(0, 0, 0, 0.08) !important;
+    color: var(--ion-text-primary) !important;
+    border-radius: 32px !important;
+  }
+
+  ion-icon {
+    font-size: 22px !important;
   }
 }

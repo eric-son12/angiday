@@ -1,0 +1,43 @@
+.order-confirmed-page {
+  padding: 16px;
+  padding-top: max(calc(var(--ion-safe-area-top) + 32px), 16px);
+  padding-bottom: max(var(--ion-safe-area-bottom), 16px);
+  height: 100%;
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+
+  .order-confirmed-banner {
+    transform: rotate(90deg);
+    width: 56%;
+    justify-self: center;
+  }
+
+  .order-confirmed-content {
+    padding-bottom: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+      max-width: 96%;
+    }
+
+    .title {
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--ion-text-primary);
+    }
+
+    .subtitle {
+      color: var(--ion-text-secondary);
+    }
+  }
+
+  .order-confirmed-action {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

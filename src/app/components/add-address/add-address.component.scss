@@ -1,0 +1,75 @@
+.add-address-modal {
+  ion-header {
+    ion-toolbar {
+      padding: 0;
+      --background: white;
+      --border-width: 0;
+      --padding-top: max(var(--ion-safe-area-top), 16px);
+      --padding-bottom: 16px;
+      --padding-start: 0px;
+      --padding-end: 0;
+    }
+  }
+
+  .search-address-input {
+    margin-top: 12px;
+
+    ion-icon {
+      filter: invert(49%) sepia(9%) saturate(379%) hue-rotate(186deg) brightness(97%) contrast(96%);
+    }
+  }
+
+  .building-info-wrap {
+    margin: 12px 0;
+
+    ion-input {
+      margin-bottom: 16px;
+    }
+  }
+
+  ion-list {
+    padding: 8px 0;
+
+    ion-item {
+      margin-bottom: 8px;
+      --padding-start: 0;
+      --inner-padding-top: 8px;
+      --inner-padding-bottom: 8px;
+      --inner-padding-end: 0;
+
+      .address-name {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--ion-text-primary);
+      }
+
+      .address-desc {
+        margin-top: 4px;
+        font-size: 14px;
+        color: var(--ion-text-secondary);
+      }
+    }
+  }
+}
+
+ion-footer {
+  ion-toolbar {
+    padding: 16px 12px !important;
+    padding-bottom: max(var(--ion-safe-area-bottom), 16px) !important;
+    --background: white;
+    --border-width: 0;
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+
+      ion-button {
+        &::part(native) {
+          background: var(--ion-color-gray-200);
+          color: var(--ion-color-gray-700);
+        }
+      }
+    }
+  }
+}

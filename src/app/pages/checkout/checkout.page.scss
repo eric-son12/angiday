@@ -1,0 +1,235 @@
+ion-header {
+  ion-toolbar {
+    --padding-top: 16px;
+    --padding-start: 8px;
+    --padding-end: 8px;
+    --padding-bottom: 16px;
+    --background: white;
+    --border-width: 0;
+
+    ion-title {
+      p {
+        margin: 0;
+      }
+
+      .store-name {
+        font-size: 16px;
+        color: var(--ion-text-primary);
+      }
+
+      .distance {
+        margin-top: 2px;
+        font-size: 12px;
+        color: var(--ion-text-secondary);
+      }
+    }
+  }
+}
+
+.checkout-page {
+  .checkout-list {
+    ion-item-divider {
+      --background: var(--ion-color-gray-100);
+      min-height: 54px;
+      border: 0;
+
+      ion-label {
+        font-weight: 600;
+        color: var(--ion-text-primary);
+      }
+    }
+
+    .products-list {
+      padding-top: 16px;
+
+      .product-item {
+        margin-bottom: 16px;
+
+        ion-thumbnail {
+          --border-radius: 8px;
+        }
+
+        .product-name {
+          font-weight: 500;
+          color: var(--ion-text-primary);
+        }
+
+        .product-price {
+          color: var(--ion-text-secondary);
+          font-size: 14px;
+          margin-top: 4px;
+        }
+
+        .product-quantity {
+          margin: 0;
+          padding: 4px;
+          color: var(--ion-color-secondary);
+          font-weight: 500;
+          font-size: 14px;
+        }
+
+        ion-note {
+          display: flex;
+          align-items: center;
+          background: #f1f4f8;
+          border-radius: 16px;
+
+          ion-button {
+            width: fit-content;
+            height: fit-content;
+
+            &::part(native) {
+              padding: 6px 8px;
+            }
+
+            ion-icon {
+              margin: 0;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+
+    .address-section {
+      .map-wrap {
+        padding: 16px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      ion-item {
+        margin-bottom: 16px;
+
+        .address {
+          font-size: 16px;
+          font-weight: 500;
+          color: var(--ion-text-primary);
+        }
+
+        .city {
+          color: var(--ion-text-secondary);
+        }
+      }
+    }
+
+    .payment-section {
+      margin-bottom: 16px;
+
+      .payment-list {
+        padding-top: 16px;
+
+        ion-item {
+          margin-bottom: 16px;
+
+          .card-type {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--ion-text-primary);
+          }
+
+          .card-number {
+            color: var(--ion-text-secondary);
+          }
+        }
+      }
+
+      .add-payment-method-btn {
+        margin: 0 16px;
+
+        &::part(native) {
+          border-radius: 32px;
+        }
+      }
+    }
+
+    .promotion-section {
+      margin-bottom: 16px;
+
+      .voucher-list {
+        padding-top: 16px;
+
+        ion-item {
+          margin-bottom: 16px;
+
+          .voucher-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--ion-text-primary);
+          }
+
+          .voucher-desc {
+            color: var(--ion-text-secondary);
+          }
+        }
+      }
+
+      .add-other-voucher-btn {
+        margin: 0 16px;
+
+        &::part(native) {
+          border-radius: 32px;
+        }
+      }
+    }
+  }
+}
+
+ion-footer {
+  // position: fixed;
+  // bottom: 0;
+
+  ion-toolbar {
+    box-shadow: 0px -1px 4px var(--ion-color-gray-100);
+    --background: white;
+    --border-width: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-top: 0;
+    padding-bottom: max(var(--ion-safe-area-bottom), 16px) !important;
+
+    .total-price-wrap {
+      background: var(--ion-color-gray-100);
+      padding-top: 12px;
+      padding-bottom: 12px;
+
+      .summary-list {
+        background: var(--ion-color-gray-100);
+
+        ion-item {
+          --background: var(--ion-color-gray-100);
+
+          ion-label {
+            font-size: 16px;
+            color: var(--ion-text-secondary);
+          }
+
+          ion-note {
+            font-size: 16px;
+            color: var(--ion-text-secondary);
+            font-weight: 500;
+          }
+
+          &.total-amount {
+            ion-label {
+              font-weight: 600;
+              color: var(--ion-text-primary);
+            }
+
+            ion-note {
+              font-weight: 600;
+              color: var(--ion-text-primary);
+            }
+          }
+        }
+      }
+    }
+
+    .place-order-btn {
+      margin: 16px;
+      margin-bottom: 0;
+    }
+  }
+}

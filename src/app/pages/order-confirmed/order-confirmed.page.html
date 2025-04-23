@@ -1,0 +1,15 @@
+<ion-content [fullscreen]="true">
+  <div class="order-confirmed-page">
+    <img class="order-confirmed-banner" src="assets/images/onboarding-banner-1.svg" alt="" />
+
+    <div class="order-confirmed-content">
+      <p class="title">Đơn hàng của bạn đã được xác nhận</p>
+      <p class="subtitle">Bạn có thể theo dõi tiến trình trực tiếp hoặc từ trang chủ</p>
+    </div>
+
+    <div class="order-confirmed-action">
+      <ion-button expand="full" color="light" (click)="navigateToOrder()"> Theo dõi đơn hàng </ion-button>
+      <ion-button expand="full" color="primary" (click)="navigateToHome()"> Trở về Trang chủ </ion-button>
+    </div>
+  </div>
+</ion-content>

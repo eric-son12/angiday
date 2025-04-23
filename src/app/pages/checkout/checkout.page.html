@@ -1,0 +1,168 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button class="back-button" icon="chevron-back-outline" mode="md" color="dark" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <p class="store-name">Tiệm ăn Chị Bảy</p>
+      <p class="distance">Cách bạn khoảng: 2.3 km</p>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="checkout-page">
+  <ion-list class="ion-no-padding checkout-list" lines="none">
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label slot="start">Chi tiết đơn hàng</ion-label>
+      </ion-item-divider>
+
+      <ion-list class="products-list">
+        <ion-item-sliding>
+          <ion-item class="product-item">
+            <ion-thumbnail slot="start">
+              <img src="assets/images/product-detail-1.png" />
+            </ion-thumbnail>
+            <ion-label>
+              <p class="product-name">Blueberry Pancakes</p>
+              <p class="product-price">{{ 56000 | number }}</p>
+            </ion-label>
+            <ion-note>
+              <ion-button color="secondary" fill="clear" size="small">
+                <ion-icon slot="start" name="remove"></ion-icon>
+              </ion-button>
+              <p class="product-quantity">1</p>
+              <ion-button color="secondary" fill="clear" size="small">
+                <ion-icon slot="start" name="add"></ion-icon>
+              </ion-button>
+            </ion-note>
+          </ion-item>
+
+          <ion-item-options>
+            <ion-item-option color="danger">Xóa</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+
+        <ion-item-sliding>
+          <ion-item class="product-item">
+            <ion-thumbnail slot="start">
+              <img src="assets/images/product-detail-2.png" />
+            </ion-thumbnail>
+            <ion-label>
+              <p class="product-name">Oatmeal & Blueberries</p>
+              <p class="product-price">{{ 75000 | number }}</p>
+            </ion-label>
+            <ion-note>
+              <ion-button color="secondary" fill="clear" size="small">
+                <ion-icon slot="start" name="remove"></ion-icon>
+              </ion-button>
+              <p class="product-quantity">1</p>
+              <ion-button color="secondary" fill="clear" size="small">
+                <ion-icon slot="start" name="add"></ion-icon>
+              </ion-button>
+            </ion-note>
+          </ion-item>
+
+          <ion-item-options>
+            <ion-item-option color="danger">Xóa</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </ion-item-group>
+
+    <ion-item-group class="address-section">
+      <ion-item-divider>
+        <ion-label slot="start">Địa chỉ nhận hàng</ion-label>
+      </ion-item-divider>
+
+      <div class="map-wrap">
+        <img src="assets/images/fake-map.svg" alt="" />
+      </div>
+      <ion-item lines="none" [detail]="true">
+        <ion-icon slot="start" src="assets/icon/ico-location.svg"></ion-icon>
+        <ion-label>
+          <p class="address">97 Man Thiện, Phước Long B, Quận 9</p>
+          <p class="city">Hồ Chí Minh</p>
+        </ion-label>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group class="payment-section">
+      <ion-item-divider>
+        <ion-label slot="start">Phương thức thanh toán</ion-label>
+      </ion-item-divider>
+
+      <ion-list class="payment-list">
+        <ion-item lines="none" [detail]="true">
+          <ion-icon slot="start" src="assets/images/master-card.svg"></ion-icon>
+          <ion-label>
+            <p class="card-type">Thẻ Mastercard</p>
+            <p class="card-number">Kết thúc với 4956</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      <ion-button class="add-payment-method-btn" color="secondary" fill="outline"> Thêm phương thức thanh toán </ion-button>
+    </ion-item-group>
+
+    <ion-item-group class="promotion-section">
+      <ion-item-divider>
+        <ion-label slot="start">Mã giảm giá</ion-label>
+      </ion-item-divider>
+
+      <ion-list class="voucher-list">
+        <ion-item lines="none" [detail]="true">
+          <ion-icon slot="start" src="assets/icon/ico-discount.svg"></ion-icon>
+          <ion-label>
+            <p class="voucher-title">Voucher giảm giá 15%</p>
+            <p class="voucher-desc">Đơn hàng trên 100.000đ giảm 15%</p>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="none" [detail]="true">
+          <ion-icon slot="start" src="assets/icon/ico-discount.svg"></ion-icon>
+          <ion-label>
+            <p class="voucher-title">Voucher giảm giá 15%</p>
+            <p class="voucher-desc">Đơn hàng trên 100.000đ giảm 15%</p>
+          </ion-label>
+        </ion-item>
+        <ion-item lines="none" [detail]="true">
+          <ion-icon slot="start" src="assets/icon/ico-discount.svg"></ion-icon>
+          <ion-label>
+            <p class="voucher-title">Voucher giảm giá 15%</p>
+            <p class="voucher-desc">Đơn hàng trên 100.000đ giảm 15%</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      @if (!isUseAnotherVoucher) {
+        <ion-button class="add-other-voucher-btn" color="secondary" fill="outline" (click)="isUseAnotherVoucher = true"> Sử dụng mã giảm giá khác </ion-button>
+      } @else {
+        <ion-input mode="md" fill="outline" placeholder="Mã giảm giá">
+          <ion-icon slot="start" src="assets/icon/ico-discount.svg"></ion-icon>
+        </ion-input>
+      }
+    </ion-item-group>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="total-price-wrap">
+      <ion-list class="summary-list" lines="none">
+        <ion-item lines="none">
+          <ion-label>Phí vận chuyển</ion-label>
+          <ion-note>{{ 15000 | number }}</ion-note>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>Giảm giá</ion-label>
+          <ion-note>{{ 20000 | number }}</ion-note>
+        </ion-item>
+        <ion-item class="total-amount" lines="none">
+          <ion-label>Tổng</ion-label>
+          <ion-note>{{ 165000 | number }}</ion-note>
+        </ion-item>
+      </ion-list>
+    </div>
+    <ion-button class="place-order-btn" expand="full" color="primary" (click)="navigateToConfirmed()"> Đặt hàng </ion-button>
+  </ion-toolbar>
+</ion-footer>

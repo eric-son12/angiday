@@ -124,6 +124,7 @@ ion-modal.sign-up-modal {
         color: white;
 
         .title {
+          text-align: center;
           font-size: 42px;
           font-weight: 700;
         }
@@ -132,10 +133,12 @@ ion-modal.sign-up-modal {
           margin-bottom: 40%;
           font-size: 18px;
           font-weight: 500;
+          text-align: center;
         }
       }
 
       .group-button-wrap {
+        padding-bottom: max(var(--ion-safe-area-bottom), 16px) !important;
         display: flex;
         flex-direction: column;
         gap: 8px;

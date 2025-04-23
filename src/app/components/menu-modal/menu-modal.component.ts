@@ -22,33 +22,10 @@ import {
   IonRadio,
   IonCheckbox,
 } from '@ionic/angular/standalone';
-import { addIcons } from 'ionicons';
-import { add, chevronBack, chevronBackOutline, remove } from 'ionicons/icons';
 
 @Component({
   selector: 'app-menu-modal',
-  imports: [
-    IonHeader,
-    IonToolbar,
-    IonTitle,
-    IonContent,
-    IonFooter,
-    IonButton,
-    IonButtons,
-    IonBackButton,
-    IonLabel,
-    IonIcon,
-    IonList,
-    IonItem,
-    IonInput,
-    IonItemGroup,
-    IonItemDivider,
-    IonNote,
-    IonChip,
-    IonRadioGroup,
-    IonRadio,
-    IonCheckbox,
-  ],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonFooter, IonButton, IonButtons, IonBackButton, IonLabel, IonIcon, IonList, IonItem, IonInput, IonItemGroup, IonItemDivider, IonNote, IonChip, IonRadioGroup, IonRadio, IonCheckbox],
   templateUrl: './menu-modal.component.html',
   styleUrls: ['./menu-modal.component.scss'],
 })
@@ -57,13 +34,7 @@ export class MenuModalComponent implements OnInit {
 
   private modalCtrl = inject(ModalController);
 
-  constructor() {
-    addIcons({
-      add,
-      remove,
-      chevronBackOutline,
-    });
-  }
+  constructor() {}
 
   ngOnInit() {
     console.log('MenuModalComponent initialized', this.product());

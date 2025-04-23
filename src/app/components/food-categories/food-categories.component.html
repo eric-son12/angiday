@@ -7,11 +7,7 @@
     </ion-button>
   </div>
   <div class="food-categories-content">
-    <swiper-container
-      class="mySwiper"
-      space-between="8px"
-      slides-per-view="auto"
-    >
+    <swiper-container class="mySwiper" space-between="8px" slides-per-view="auto">
       @for (category of categories; track $index) {
         <swiper-slide class="category-item">
           <div class="bg-category">

@@ -18,43 +18,18 @@ import {
   IonThumbnail,
   IonNote,
   IonIcon,
+  IonFooter,
   ModalController,
 } from '@ionic/angular/standalone';
-import { addIcons } from 'ionicons';
-import {
-  add,
-  chevronBackOutline,
-  star,
-  starHalf,
-  starHalfOutline,
-  starOutline,
-} from 'ionicons/icons';
+
 import { MenuModalComponent } from 'src/app/components/menu-modal/menu-modal.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.page.html',
   styleUrls: ['./product-detail.page.scss'],
-  imports: [
-    IonContent,
-    IonHeader,
-    IonTitle,
-    IonToolbar,
-    CommonModule,
-    IonButtons,
-    IonButton,
-    IonBackButton,
-    IonList,
-    IonItem,
-    IonSegment,
-    IonSegmentButton,
-    IonSegmentView,
-    IonSegmentContent,
-    IonLabel,
-    IonThumbnail,
-    IonNote,
-    IonIcon,
-  ],
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, IonButtons, IonButton, IonBackButton, IonList, IonItem, IonSegment, IonSegmentButton, IonSegmentView, IonSegmentContent, IonLabel, IonThumbnail, IonNote, IonIcon, IonFooter],
 })
 export class ProductDetailPage implements OnInit {
   categories = [
@@ -96,17 +71,9 @@ export class ProductDetailPage implements OnInit {
   ];
 
   private modalCtrl = inject(ModalController);
+  private router = inject(Router);
 
-  constructor() {
-    addIcons({
-      add,
-      starOutline,
-      starHalfOutline,
-      star,
-      starHalf,
-      chevronBackOutline,
-    });
-  }
+  constructor() {}
 
   ngOnInit() {}
 
@@ -124,5 +91,9 @@ export class ProductDetailPage implements OnInit {
     if (role === 'confirm') {
       console.log('Modal closed with data:', data);
     }
+  }
+
+  navigateToCheckout() {
+    this.router.navigate(['/checkout']);
   }
 }

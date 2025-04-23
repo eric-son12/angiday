@@ -1,0 +1,61 @@
+<ion-content class="add-address-modal ion-padding" [fullscreen]="true">
+  <ion-header mode="md">
+    <ion-toolbar mode="md">
+      <ion-buttons slot="start">
+        <ion-button class="back-button" color="dark" (click)="cancel($event)">
+          <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <ion-title> Thêm địa chỉ </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  @if (!isBuilding) {
+    <div class="search-address-input">
+      <ion-input mode="md" fill="outline" [value]="address" (ionInput)="onInput($event)" placeholder="Nhập địa chỉ của bạn">
+        <ion-icon slot="start" src="assets/icon/ico-location.svg"></ion-icon>
+      </ion-input>
+
+      <ion-list>
+        @for (item of addressList; track $index) {
+          <ion-item class="address-item" (click)="navigateToOnboarding()">
+            <ion-label>
+              <p class="address-name">{{ item.name }}</p>
+              <p class="address-desc">{{ item.address }}</p>
+            </ion-label>
+          </ion-item>
+        }
+      </ion-list>
+    </div>
+  } @else {
+    <div class="building-info-wrap">
+      <ion-input mode="md" fill="outline" label="Tầng số" labelPlacement="floating" placeholder="Tầng số"> </ion-input>
+
+      <ion-input mode="md" fill="outline" label="Outline" label="Căn hộ số" labelPlacement="floating" placeholder="Căn hộ số"> </ion-input>
+    </div>
+  }
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="footer-content">
+      <ion-button class="add-to-cart-btn" expand="full" color="light">
+        <ion-icon slot="start" src="assets/icon/ico-house.svg"></ion-icon>
+        Nhà ở
+      </ion-button>
+      <ion-button class="add-to-cart-btn" expand="full" color="light" (click)="isBuilding = !isBuilding">
+        <ion-icon slot="start" src="assets/icon/ico-apartment.svg"></ion-icon>
+        Chung cư
+      </ion-button>
+      <ion-button class="add-to-cart-btn" expand="full" color="light" (click)="isBuilding = !isBuilding">
+        <ion-icon slot="start" src="assets/icon/ico-office.svg"></ion-icon>
+        Công ty
+      </ion-button>
+      <ion-button class="add-to-cart-btn" expand="full" color="light">
+        <ion-icon slot="start" src="assets/icon/ico-other-building.svg"></ion-icon>
+        Khác
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

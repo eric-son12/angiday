@@ -2,12 +2,7 @@
   <ion-header>
     <ion-toolbar>
       <ion-buttons slot="start" (click)="cancel()">
-        <ion-back-button
-          mode="md"
-          icon="chevron-back-outline"
-          color="dark"
-          defaultHref="/"
-        ></ion-back-button>
+        <ion-back-button mode="md" icon="chevron-back-outline" color="dark" defaultHref="/"></ion-back-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
@@ -17,9 +12,7 @@
       <p class="name">Hồng trà sữa</p>
       <p class="price">32.000</p>
     </div>
-    <p class="desc">
-      Không quá đậm trà, thơm trà đen nguyên lá. Ngọt không quá gắt.
-    </p>
+    <p class="desc">Không quá đậm trà, thơm trà đen nguyên lá. Ngọt không quá gắt.</p>
   </div>
 
   <ion-list lines="none" class="variant-list">
@@ -190,13 +183,7 @@
       </ion-item-divider>
 
       <ion-item class="variant-item">
-        <ion-input
-          class="ion-paddings"
-          label-placement="floating"
-          mode="md"
-          fill="outline"
-          placeholder="Ghi chú của bạn"
-        ></ion-input>
+        <ion-input class="ion-paddings" label-placement="floating" mode="md" fill="outline" placeholder="Ghi chú của bạn"></ion-input>
       </ion-item>
     </ion-item-group>
   </ion-list>
@@ -215,14 +202,7 @@
         </ion-button>
       </div>
       <div class="add-to-cart">
-        <ion-button
-          class="add-to-cart-btn"
-          expand="full"
-          color="primary"
-          (click)="addToCart()"
-        >
-          Thêm vào giỏ - 32.000
-        </ion-button>
+        <ion-button class="add-to-cart-btn" expand="full" color="primary" (click)="addToCart()"> Thêm vào giỏ - 32.000 </ion-button>
       </div>
     </div>
   </ion-toolbar>

@@ -1,0 +1,55 @@
+.onboarding-page {
+  --padding-top: max(var(--ion-safe-area-top), 20px);
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-bottom: 20px;
+
+  .onboarding-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    height: 100%;
+
+    .onboarding-title {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 36px;
+      color: var(--ion-text-primary);
+      text-align: center;
+    }
+
+    .onboarding-subtitle {
+      margin-top: 24px;
+      margin-bottom: 0;
+      color: var(--ion-text-secondary);
+      line-height: 22px;
+      text-align: center;
+    }
+
+    .hero-banner-group {
+      position: relative;
+      min-height: 375px;
+
+      .banner-1 {
+        position: absolute;
+        left: 50%;
+        transform: rotate(90deg) translate(0, 50%);
+      }
+
+      .banner-2 {
+        position: absolute;
+        right: -40%;
+        top: 34%;
+        transform: rotate(280deg);
+      }
+
+      .banner-3 {
+        position: absolute;
+        left: -40%;
+        top: 34%;
+        transform: rotate(280deg);
+      }
+    }
+  }
+}

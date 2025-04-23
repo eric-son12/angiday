@@ -185,4 +185,30 @@
       }
     }
   }
+
+  ion-footer {
+    position: fixed;
+    bottom: 1rem;
+    max-width: 92%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    ion-toolbar {
+      margin-bottom: 4px;
+      padding-bottom: 0 !important;
+      --background: var(--ion-color-secondary);
+      --min-height: 65px;
+      border-radius: 8px;
+
+      ion-item {
+        --background: var(--ion-color-secondary);
+        --color: white;
+        font-weight: 500;
+
+        ion-note {
+          color: white;
+        }
+      }
+    }
+  }
 }

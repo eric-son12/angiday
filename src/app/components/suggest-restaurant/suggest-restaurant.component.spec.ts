@@ -9,8 +9,8 @@ describe('SuggestRestaurantComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ SuggestRestaurantComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [SuggestRestaurantComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SuggestRestaurantComponent);

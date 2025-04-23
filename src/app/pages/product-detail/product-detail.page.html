@@ -2,12 +2,7 @@
   <ion-header>
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-back-button
-          mode="md"
-          icon="chevron-back-outline"
-          color="dark"
-          defaultHref="/"
-        ></ion-back-button>
+        <ion-back-button mode="md" icon="chevron-back-outline" color="dark" defaultHref="/"></ion-back-button>
       </ion-buttons>
       <ion-title></ion-title>
     </ion-toolbar>
@@ -40,47 +35,51 @@
   <div class="product-detail-content">
     <ion-segment mode="md" value="all" scrollable="true">
       @for (cate of categories; track $index) {
-      <ion-segment-button [value]="cate.value" [contentId]="cate.value">
-        <ion-label>{{cate.name}}</ion-label>
-      </ion-segment-button>
+        <ion-segment-button [value]="cate.value" [contentId]="cate.value">
+          <ion-label>{{ cate.name }}</ion-label>
+        </ion-segment-button>
       }
     </ion-segment>
     <ion-segment-view>
       @for (cate of categories; track $index) {
-      <ion-segment-content class="ion-padding" [id]="cate.value">
-        <div class="advertise">
-          <div>
-            <p class="advertise-title">
-              Tiết kiệm 10% cho đơn hàng từ 200.000đ trở lên
-            </p>
-            <p class="advertise-desc">
-              Giảm giá 10% cho đơn hàng từ 200.000đ trở lên. Không áp dụng cho
-              các sản phẩm đã giảm giá.
-            </p>
+        <ion-segment-content class="ion-padding" [id]="cate.value">
+          <div class="advertise">
+            <div>
+              <p class="advertise-title">Tiết kiệm 10% cho đơn hàng từ 200.000đ trở lên</p>
+              <p class="advertise-desc">Giảm giá 10% cho đơn hàng từ 200.000đ trở lên. Không áp dụng cho các sản phẩm đã giảm giá.</p>
+            </div>
+            <img src="assets/icon/ico-badge.svg" alt="badge icon" />
           </div>
-          <img src="assets/icon/ico-badge.svg" alt="badge icon" />
-        </div>
-        <ion-list class="ion-no-padding products-list" lines="none">
-          @for (product of cate.products; track $index) {
-          <ion-item class="product-item" (click)="openMenuModal(product)">
-            <ion-thumbnail slot="start">
-              <img src="{{ product.image }}" alt="{{ product.name }}" />
-            </ion-thumbnail>
-            <ion-label>
-              <p class="name">{{ product.name }}</p>
-              <p class="desc">{{ product.desc }}</p>
-              <p class="price">{{ product.price | number }}</p>
-            </ion-label>
-            <ion-note>
-              <ion-button color="primary" class="add-to-cart-btn">
-                <ion-icon slot="start" name="add"></ion-icon>
-              </ion-button>
-            </ion-note>
-          </ion-item>
-          }
-        </ion-list>
-      </ion-segment-content>
+          <ion-list class="ion-no-padding products-list" lines="none">
+            @for (product of cate.products; track $index) {
+              <ion-item class="product-item" (click)="openMenuModal(product)">
+                <ion-thumbnail slot="start">
+                  <img src="{{ product.image }}" alt="{{ product.name }}" />
+                </ion-thumbnail>
+                <ion-label>
+                  <p class="name">{{ product.name }}</p>
+                  <p class="desc">{{ product.desc }}</p>
+                  <p class="price">{{ product.price | number }}</p>
+                </ion-label>
+                <ion-note>
+                  <ion-button color="primary" class="add-to-cart-btn">
+                    <ion-icon slot="start" name="add"></ion-icon>
+                  </ion-button>
+                </ion-note>
+              </ion-item>
+            }
+          </ion-list>
+        </ion-segment-content>
       }
     </ion-segment-view>
   </div>
+
+  <ion-footer mode="ios">
+    <ion-toolbar mode="ios">
+      <ion-item lines="none" (click)="navigateToCheckout()">
+        <ion-label>Proceed to order 1 item</ion-label>
+        <ion-note>{{ 124000 | number }}</ion-note>
+      </ion-item>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>

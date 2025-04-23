@@ -1,0 +1,12 @@
+<ion-content class="location-page" [fullscreen]="true">
+  <p class="delivery-title">Đặt địa chỉ giao hàng</p>
+  <p class="delivery-subtitle">
+    Chúng tôi sẽ tìm cửa hàng gần bạn.
+    <b>Chỉ cần cho chúng tôi biết địa điểm</b>
+  </p>
+  <img class="banner" src="assets/images/delivery-person.svg" alt="" />
+  <div class="groups-btn">
+    <ion-button id="open-sign-in-modal" class="set-location-btn" expand="full" color="primary"> Đặt địa chỉ </ion-button>
+    <ion-button id="open-sign-up-modal" class="not-now-btn" expand="full" color="light" (click)="openAddAddressModal()"> Không phải bây giờ </ion-button>
+  </div>
+</ion-content>

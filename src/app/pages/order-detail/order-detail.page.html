@@ -1,0 +1,108 @@
+<ion-header class="order-detail-header" mode="ios" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="back-button" mode="md" icon="chevron-back-outline" color="dark" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Order #5312</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="order-detail-page" [fullscreen]="true">
+  <ion-header collapse="condense" mode="ios">
+    <ion-toolbar>
+      <ion-label slot="start">
+        <p class="order-id">Order #5312</p>
+        <p class="order-status">Check your order status below:</p>
+      </ion-label>
+      <ion-thumbnail slot="end">
+        <img src="assets/images/onboarding-banner-1.svg" />
+      </ion-thumbnail>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="order-detail-content">
+    <div class="order-status">
+      <div class="line-tracking"></div>
+      <ion-list class="order-status-list" lines="none">
+        <ion-item class="active">
+          <ion-icon slot="start" name="checkmark-circle"></ion-icon>
+          <ion-label>
+            <p>Order Received</p>
+            <p>Waiting for vendor to confirm your order</p>
+          </ion-label>
+          <ion-note slot="end">9:41am</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name="checkmark-circle"></ion-icon>
+          <ion-label>
+            <p>Preparing Your Order</p>
+            <p>Your order will be ready in a few minutes</p>
+          </ion-label>
+          <ion-note slot="end"></ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name="checkmark-circle"></ion-icon>
+          <ion-label>
+            <p>Order Ready</p>
+            <p>Your order is ready for pickup</p>
+          </ion-label>
+          <ion-note slot="end"></ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name="checkmark-circle"></ion-icon>
+          <ion-label>
+            <p>Order On The Way</p>
+            <p>Your order is on its way to you</p>
+          </ion-label>
+          <ion-note slot="end"></ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name="checkmark-circle"></ion-icon>
+          <ion-label>
+            <p>Order Arrived</p>
+            <p>Your driver is here to deliver your order.</p>
+          </ion-label>
+          <ion-note slot="end"></ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name="checkmark-circle"></ion-icon>
+          <ion-label>
+            <p>Order Delivered</p>
+            <p>Your order has been delivered</p>
+          </ion-label>
+          <ion-note slot="end"></ion-note>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div class="delivery-info">
+      <div class="delivery-detail">
+        <p class="title">Delivery details</p>
+        <p class="address">
+          <img src="assets/icon/ico-location.svg" alt="" />
+          Carrer de Còresga, 344, Barcelona, Spain
+        </p>
+      </div>
+
+      <div class="delivery-person">
+        <ion-item lines="none">
+          <ion-avatar slot="start">
+            <img src="assets/images/avatar.svg" alt="" />
+          </ion-avatar>
+          <ion-label>
+            <p>Thomas Ridley</p>
+            <p>Food Courier</p>
+          </ion-label>
+          <ion-note>
+            <ion-button color="light" fill="clear" class="call-btn">
+              <ion-icon slot="start" name="map-outline"></ion-icon>
+            </ion-button>
+            <ion-button color="light" fill="clear" class="map-btn">
+              <ion-icon slot="start" name="call-outline"></ion-icon>
+            </ion-button>
+          </ion-note>
+        </ion-item>
+      </div>
+    </div>
+  </div>
+</ion-content>

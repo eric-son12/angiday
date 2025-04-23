@@ -9,8 +9,8 @@ describe('SplashScreenComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ SplashScreenComponent ],
-      imports: [IonicModule.forRoot()]
+      declarations: [SplashScreenComponent],
+      imports: [IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SplashScreenComponent);
